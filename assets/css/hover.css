@@ -1,0 +1,27 @@
+.point {
+	cursor:pointer;
+}
+
+.selec {
+	background-color:#cfcdcd;
+}
+
+ul>li, a{
+	cursor: pointer;
+}
+
+.pagination-sm {
+	margin-top:2px;
+}
+
+.hide-input {
+	display:none;
+}
+
+.font-upper {
+	text-transform:uppercase;
+}
+
+.textBold {
+	font-weight:bold;
+}

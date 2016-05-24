@@ -1,0 +1,22 @@
+<IfModule mod_rewrite.c>
+  Options +FollowSymLinks
+  RewriteEngine on
+  RewriteCond $1 !^(index\.php|(.*)\.swf|uploadify|application|system|js)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)$ index.php/?$1 [L]
+</IfModule>
+
+
+#Block access for one file
+<Files license.txt>
+	Order allow,deny
+	Deny from all
+</Files>
+
+
+#Block access for some files
+<FilesMatch "\.(htaccess|htpasswd|ini|phps|fla|psd|log|sh)$">
+	Order allow,deny
+	Deny from all
+</FilesMatch>
